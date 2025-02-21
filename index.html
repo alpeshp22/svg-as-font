@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG as a Font Icon Library</title>
+    <!-- Light mode favicon -->
+    <link rel="icon" href="favicon-dark.png" type="image/png" media="(prefers-color-scheme: light)">
+    <!-- Dark mode favicon -->
+    <link rel="icon" href="favicon-light.png" type="image/png" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h3>SVG use as a Font Icon Steps</h3>
+        <ol>
+            <li>Create a svg file as a <code>icon.svg</code>. You can create the file with any name, but file farmatt as
+                <code>.svg</code> is
+                compulsory. <br> Save the file in your project's folder, ex.
+                <code>assets/icon.svg | images/icon.svg | css/icon.svg</code>
+            </li>
+            <li>
+                In <code>icon.svg</code> file create <code>&lt;svg&gt;</code> then add in the svg (icon) as a
+                <code>&lt;symbol&gt;&lt;path id="home-icon"/&gt;&lt;/symbol&gt;</code>
+            </li>
+            <li>
+                Place as a icon in your file like <mark>index.html</mark> icon code will be
+                <code><code>&lt;svg&gt;&lt;use xlink:href="assets/icons.svg#home"&gt;&lt;/use&gt;&lt;/svg&gt;</code></code>.
+                Make sure your file path is correct.
+            </li>
+            <li>🎉 Done. Your svg file work as a font icon like below the underline.</li>
+        </ol>
+        <hr>
+        <p>
+            <svg class="icon">
+                <use xlink:href="assets/icons.svg#home"></use>
+            </svg>
+            <svg class="icon">
+                <use xlink:href="assets/icons.svg#user"></use>
+            </svg>
+            <svg class="icon">
+                <use xlink:href="assets/icons.svg#error"></use>
+            </svg>
+            <svg class="icon">
+                <use xlink:href="assets/icons.svg#arrowRight"></use>
+            </svg>
+            <svg class="icon">
+                <use xlink:href="assets/icons.svg#edit"></use>
+            </svg>
+            <svg class="icon">
+                <use xlink:href="assets/icons.svg#trash"></use>
+            </svg>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, officiis illo excepturi ipsam
+            repudiandae harum quisquam doloremque porro odio a quas, soluta aperiam dolores saepe ea? Quisquam possimus
+            aliquid commodi.
+        </p>
+        <button type="button" class="btn btn-primary">
+            <svg>
+                <use xlink:href="assets/icons.svg#edit"></use>
+            </svg> Edit
+        </button>
+        <a href="javascript:void(0);" class="btn btn-link btn-link-danger">
+            <svg>
+                <use xlink:href="assets/icons.svg#trash"></use>
+            </svg> Delete
+        </a>
+
+    </div>
+</body>
+
+</html>
